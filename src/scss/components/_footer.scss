@@ -1,0 +1,34 @@
+.footer {
+  padding-bottom: 12rem;
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__link,
+  &__copy {
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 150%;
+    color: var(--bp-black);
+  }
+
+  &__link {
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: var(--bp-blue);
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+      color: var(--bp-blue);
+    }
+
+    &:active {
+      color: var(--bp-blue);
+    }
+  }
+}

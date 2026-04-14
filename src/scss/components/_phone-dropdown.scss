@@ -1,0 +1,85 @@
+// Variables
+$text-color: var(--bp-black);
+$border-color: none;
+$primary-color: var(--bp-blue);
+$primary-hover: var(--bp-blue-hover);
+
+.phone-dropdown {
+  margin-left: auto;
+  position: relative;
+  display: inline-block;
+
+  &__trigger {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.8rem 1.2rem;
+    user-select: none;
+  }
+
+  &__number {
+    font-weight: 500;
+    font-size: 2.8rem;
+    color: $text-color;
+    white-space: nowrap;
+  }
+
+  &__arrow {
+    transition: transform 0.3s ease;
+    color: $text-color;
+    width: 0.8rem;
+    height: 0.8rem;
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    top: calc(100% + 1rem);
+    right: 0;
+    background: var(--white);
+    padding: 4rem;
+    width: 40.6rem;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-1rem);
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease,
+      visibility 0.2s;
+
+    &--open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.07);
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__location {
+    font-weight: 300;
+    font-size: 2rem;
+    text-align: right;
+    color: #000;
+  }
+
+  &__button {
+    width: 100%;
+  }
+}
+
+// Mobile styles
+@media (max-width: 576px) {
+  .phone-dropdown {
+  }
+}

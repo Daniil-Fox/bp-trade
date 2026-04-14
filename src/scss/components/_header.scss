@@ -1,0 +1,26 @@
+// ваш код
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 4rem 0;
+  background-color: var(--white);
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 11rem;
+  }
+
+  &__btn {
+    min-width: 30rem;
+  }
+}

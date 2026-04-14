@@ -1,0 +1,36 @@
+.trust {
+  &__title {
+    margin-bottom: 6rem;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+
+  &__card {
+    &:first-child {
+      grid-row: 2 span;
+    }
+
+    min-height: 33.45rem;
+
+    background-color: #f7f7f7;
+    padding: 5rem;
+    position: relative;
+  }
+
+  &__card-img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.contacts {
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+
+    margin-bottom: 6rem;
+  }
+
+  &__btn {
+    max-width: 37rem;
+    width: 100%;
+  }
+
+  &__container {
+    display: flex;
+    gap: 4rem;
+  }
+
+  &__address {
+    max-width: 56rem;
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  &__map {
+    flex-grow: 1;
+    background-color: #f7f7f7;
+  }
+}

@@ -1,0 +1,32 @@
+.benefits {
+  &__title {
+    margin-bottom: 6rem;
+  }
+
+  &__items {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 33.4rem;
+    background-color: #f7f7f7;
+    flex-grow: 1;
+    flex-basis: calc(100% / 3 - 4rem);
+    padding: 5rem;
+  }
+
+  &__item-icon {
+    height: 4.8rem;
+    display: flex;
+    justify-content: flex-end;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}

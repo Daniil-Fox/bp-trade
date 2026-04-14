@@ -1,0 +1,40 @@
+.about {
+  &__title {
+    margin-bottom: 2rem;
+  }
+  &__container {
+    display: flex;
+    gap: 10rem;
+  }
+  &__content {
+    width: 100%;
+    max-width: 60rem;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  &__img {
+    position: relative;
+    flex-grow: 1;
+    min-height: 70rem;
+    margin-left: -20rem;
+    mask-image: url("./../img/svg/img-mask.svg");
+    mask-size: cover;
+    mask-position: left;
+
+    img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-position: right;
+    }
+  }
+
+  &__btn {
+    width: 52rem;
+  }
+}

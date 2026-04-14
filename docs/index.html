@@ -1,0 +1,986 @@
+<!doctype html>
+<html lang="ru" class="page">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#111111" />
+  <title>БП ТРЕЙД</title>
+
+  <link
+    rel="preload"
+    href="fonts/Montserrat-Regular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat-Medium.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat-Bold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Onest-Medium.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Uncage-Medium.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Uncage-SemiBold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/main.css" />
+
+  <script defer src="js/main.js"></script>
+  <script src="https://api-maps.yandex.ru/v3/?apikey=8c9bb3f5-07ef-4aa2-8a70-b84bc9e8879b
+&lang=ru_RU"></script>
+</head>
+
+
+  <body class="page__body">
+    <div class="site-container">
+      <header class="header">
+  <div class="container">
+    <div class="header__container">
+      <a href="/" class="logo header__logo">
+        <img src="./img/svg/logo.svg" alt="" />
+      </a>
+
+      <nav class="nav header__nav">
+        <ul>
+          <li>
+            <a href="#services">услуги</a>
+          </li>
+          <li>
+            <a href="#about">о&nbsp;нас</a>
+          </li>
+          <li>
+            <a href="#contacts">контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__right">
+        <div class="phone-dropdown" id="phoneDropdown">
+  <div class="phone-dropdown__trigger" id="phoneTrigger">
+    <a href="tel:+78002006965" class="phone-dropdown__number"
+      >+7 800 200 6965</a
+    >
+    <svg
+      width="8"
+      height="7"
+      viewBox="0 0 8 7"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="phone-dropdown__arrow"
+      id="phoneArrow"
+    >
+      <path
+        d="M3.89697 6.75L7.79409 7.34099e-07L-0.000141031 5.27059e-08L3.89697 6.75Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+
+  <div class="phone-dropdown__menu" id="phoneMenu">
+    <div class="phone-dropdown__item">
+      <div class="phone-dropdown__location">
+        Владивосток, ул.&nbsp;Спортивная, д.&nbsp;2А
+      </div>
+    </div>
+    <button class="phone-dropdown__button btn" id="callbackButton">
+      обратный звонок
+    </button>
+  </div>
+</div>
+
+
+        <button class="btn btn_sm header__btn">консультация</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <main class="main">
+        <section class="hero">
+  <div class="container">
+    <div class="hero__content">
+      <h1 class="hero__title">Автомобили под&nbsp;заказ из&nbsp;Азии</h1>
+      <ul class="hero__list list-reset">
+        <li>Подбор авто под ваш запрос</li>
+        <li>Проверка перед покупкой</li>
+        <li>Доставка под ключ</li>
+      </ul>
+      <div class="hero__actions">
+        <button class="btn btn_triangle hero__order">заказать авто</button>
+        <button class="btn btn_grey btn_triangle hero__consult">
+          получить консультацию
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="services" id="services">
+  <div class="container">
+    <div class="services__header">
+      <div class="services__text">
+        <h2 class="services__title">спектр услуг</h2>
+        <p class="services__text text-xl">
+          Мы&nbsp;сопровождаем клиента на&nbsp;всех этапах: от&nbsp;подбора авто
+          до&nbsp;передачи ключей. Работаем прозрачно, официально
+          и&nbsp;с&nbsp;гарантией результата.
+        </p>
+      </div>
+      <div class="services__control control">
+        <button class="btn-reset control__btn control__btn_prev services-prev">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#arr-right"></use>
+          </svg>
+        </button>
+        <button class="btn-reset control__btn control__btn_next services-next">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#arr-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="services__slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="services__card">
+            <h3 class="services__card-title text-xl">
+              Проверка истории и&nbsp;состояния авто
+            </h3>
+            <div class="services__card-img">
+              <picture>
+                <source srcset="./img/services/01.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/services/01.png"
+                  class="image"
+                  width="390"
+                  height="660"
+                  alt="Проверка истории и состояния авто"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="services__card">
+            <h3 class="services__card-title text-xl">Оформление документов</h3>
+            <div class="services__card-img">
+              <picture>
+                <source srcset="./img/services/02.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/services/02.png"
+                  class="image"
+                  width="390"
+                  height="660"
+                  alt="Проверка истории и состояния авто"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="services__card">
+            <h3 class="services__card-title text-xl">
+              Подбор автомобиля под&nbsp;бюджет и&nbsp;задачи
+            </h3>
+            <div class="services__card-img">
+              <picture>
+                <source srcset="./img/services/03.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/services/03.png"
+                  class="image"
+                  width="390"
+                  height="660"
+                  alt="Проверка истории и состояния авто"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="services__card">
+            <h3 class="services__card-title text-xl">
+              Участие в&nbsp;аукционах
+            </h3>
+            <div class="services__card-img">
+              <picture>
+                <source srcset="./img/services/04.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/services/04.png"
+                  class="image"
+                  width="390"
+                  height="660"
+                  alt="Проверка истории и состояния авто"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="services__card">
+            <h3 class="services__card-title text-xl">
+              Доставка и&nbsp;таможенное оформление
+            </h3>
+            <div class="services__card-img">
+              <picture>
+                <source srcset="./img/services/05.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/services/05.png"
+                  class="image"
+                  width="390"
+                  height="660"
+                  alt="Проверка истории и состояния авто"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="benefits" id="benefits">
+  <div class="container">
+    <h2 class="benefits__title">Почему выбирают «БП-Трейд»</h2>
+    <div class="benefits__items">
+      <div class="benefits__item">
+        <h3 class="benefits__item-title text-xl">
+          Персональная подборка авто с&nbsp;выгодой до&nbsp;30%
+        </h3>
+        <div class="benefits__item-icon">
+          <img src="./img/svg/card.svg" alt="" />
+        </div>
+      </div>
+      <div class="benefits__item">
+        <h3 class="benefits__item-title text-xl">
+          Полное сопровождение сделки
+        </h3>
+        <div class="benefits__item-icon">
+          <img src="./img/svg/case.svg" alt="" />
+        </div>
+      </div>
+      <div class="benefits__item">
+        <h3 class="benefits__item-title text-xl">
+          Проверка автомобиля перед покупкой
+        </h3>
+        <div class="benefits__item-icon">
+          <img src="./img/svg/car.svg" alt="" />
+        </div>
+      </div>
+      <div class="benefits__item">
+        <h3 class="benefits__item-title text-xl">Доставка по всей РФ и СНГ</h3>
+        <div class="benefits__item-icon">
+          <img src="./img/svg/flag.svg" alt="" />
+        </div>
+      </div>
+      <div class="benefits__item">
+        <h3 class="benefits__item-title text-xl">
+          Работаем только с&nbsp;проверенными площадками
+        </h3>
+        <div class="benefits__item-icon">
+          <img src="./img/svg/check.svg" alt="" />
+        </div>
+      </div>
+      <div class="benefits__item">
+        <h3 class="benefits__item-title text-xl">
+          Прозрачные условия без&nbsp;скрытых платежей
+        </h3>
+        <div class="benefits__item-icon">
+          <img src="./img/svg/cond.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="work" id="work">
+  <div class="container">
+    <div class="work__header">
+      <h2 class="work__title">Как проходит работа</h2>
+
+      <div class="work__control control">
+        <button class="btn-reset control__btn control__btn_prev work-prev">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#arr-right"></use>
+          </svg>
+        </button>
+        <button class="btn-reset control__btn control__btn_next work-next">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#arr-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="work__slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <article class="work__card">
+            <div class="work__card-img">
+              <picture>
+                <source
+                  srcset="./img/work/01-mob.webp"
+                  media="(max-width: 576px)"
+                  type="image/webp"
+                />
+                <source srcset="./img/work/01.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/work/01.jpg"
+                  class="image"
+                  width="500"
+                  height="470"
+                  alt=""
+                />
+              </picture>
+            </div>
+
+            <div class="work__card-content">
+              <h3 class="work__card-title text-xl">Оставляете заявку</h3>
+              <span class="text-xl">1</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="swiper-slide">
+          <article class="work__card">
+            <div class="work__card-img">
+              <picture>
+                <source
+                  srcset="./img/work/02-mob.webp"
+                  media="(max-width: 576px)"
+                  type="image/webp"
+                />
+                <source srcset="./img/work/02.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/work/02.jpg"
+                  class="image"
+                  width="500"
+                  height="470"
+                  alt=""
+                />
+              </picture>
+            </div>
+
+            <div class="work__card-content">
+              <h3 class="work__card-title text-xl">
+                Обсуждаем требования и&nbsp;бюджет
+              </h3>
+              <span class="text-xl">2</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="swiper-slide">
+          <article class="work__card">
+            <div class="work__card-img">
+              <picture>
+                <source
+                  srcset="./img/work/03-mob.webp"
+                  media="(max-width: 576px)"
+                  type="image/webp"
+                />
+                <source srcset="./img/work/03.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/work/03.jpg"
+                  class="image"
+                  width="500"
+                  height="470"
+                  alt=""
+                />
+              </picture>
+            </div>
+
+            <div class="work__card-content">
+              <h3 class="work__card-title text-xl">
+                Подбираем варианты и&nbsp;согласовываем
+              </h3>
+              <span class="text-xl">3</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="swiper-slide">
+          <article class="work__card">
+            <div class="work__card-img">
+              <picture>
+                <source
+                  srcset="./img/work/04-mob.webp"
+                  media="(max-width: 576px)"
+                  type="image/webp"
+                />
+                <source srcset="./img/work/04.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/work/04.jpg"
+                  class="image"
+                  width="500"
+                  height="470"
+                  alt=""
+                />
+              </picture>
+            </div>
+
+            <div class="work__card-content">
+              <h3 class="work__card-title text-xl">
+                Проверяем авто и&nbsp;выкупаем
+              </h3>
+              <span class="text-xl">4</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="swiper-slide">
+          <article class="work__card">
+            <div class="work__card-img">
+              <picture>
+                <source
+                  srcset="./img/work/05-mob.webp"
+                  media="(max-width: 576px)"
+                  type="image/webp"
+                />
+                <source srcset="./img/work/05.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/work/05.jpg"
+                  class="image"
+                  width="500"
+                  height="470"
+                  alt=""
+                />
+              </picture>
+            </div>
+
+            <div class="work__card-content">
+              <h3 class="work__card-title text-xl">
+                Доставляем и&nbsp;оформляем документы
+              </h3>
+              <span class="text-xl">5</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="swiper-slide">
+          <article class="work__card">
+            <div class="work__card-img">
+              <picture>
+                <source
+                  srcset="./img/work/06-mob.webp"
+                  media="(max-width: 576px)"
+                  type="image/webp"
+                />
+                <source srcset="./img/work/06.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/work/06.jpg"
+                  class="image"
+                  width="500"
+                  height="470"
+                  alt=""
+                />
+              </picture>
+            </div>
+
+            <div class="work__card-content">
+              <h3 class="work__card-title text-xl">
+                Передаём вам&nbsp;автомобиль
+              </h3>
+              <span class="text-xl">6</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="about" id="about">
+  <div class="container container_noright">
+    <div class="about__container">
+      <div class="about__content">
+        <div class="about__content-top">
+          <h2 class="about__title">О нас</h2>
+          <div class="about__text">
+            <p>
+              Мы&nbsp;&mdash; команда специалистов с&nbsp;опытом работы
+              на&nbsp;международных автомобильных рынках Азии. Знаем все нюансы
+              покупки и&nbsp;доставки авто и&nbsp;работаем напрямую
+              с&nbsp;аукционами и&nbsp;дилерами.
+            </p>
+            <ul>
+              <li>Более 5 лет опыта</li>
+              <li>Эксперты по Японии, Корее и Китаю</li>
+              <li>Собственные партнёры за рубежом</li>
+            </ul>
+          </div>
+        </div>
+        <div class="about__content-bottom">
+          <a href="#" target="_blank" class="btn btn_triangle about__btn">
+            перейти в телеграм канал
+          </a>
+        </div>
+      </div>
+      <div class="about__img">
+        <picture>
+          <source
+            srcset="./img/about-mob.webp"
+            media="(max-width: 576px)"
+            type="image/webp"
+          />
+          <source srcset="./img/about.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="./img/about.jpg"
+            class="image"
+            width="1200"
+            height="700"
+            alt=""
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="testi" id="testi">
+  <div class="container">
+    <div class="testi__header">
+      <div class="testi__content">
+        <h2 class="testi__title">клиенты о&nbsp;нас</h2>
+        <p class="testi__text text-xl">Уже привезли более 100 автомобилей</p>
+      </div>
+      <button class="btn testi__btn">получить консультацию</button>
+    </div>
+
+    <div class="testi__slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <article class="testi__card">
+            <div class="testi__card-img">
+              <picture>
+                <source
+                  srcset="./img/testi/01.webp"
+                  media="(max-width: 576px)"
+                  type="image/webp"
+                />
+                <source srcset="./img/testi/01.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/testi/01.jpg"
+                  class="image"
+                  width="390"
+                  height="660"
+                  alt=""
+                />
+              </picture>
+            </div>
+
+            <div class="testi__card-content">
+              <div class="testi__card-top">
+                <span>Игорь</span>
+                <span style="color: var(--grey4)">Владивосток</span>
+              </div>
+              <h3 class="testi__card-title">Toyota Harrier</h3>
+              <p>
+                Обратился в&nbsp;«БП-Трейд» и&nbsp;вообще не&nbsp;пожалел.
+                Подобрали отличный вариант, всё&nbsp;прозрачно показали
+                по&nbsp;проверке. Машина приехала в&nbsp;идеальном состоянии,
+                как&nbsp;и&nbsp;обещали.
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="testi__card">
+            <div class="testi__card-img">
+              <picture>
+                <source
+                  srcset="./img/testi/02.webp"
+                  media="(max-width: 576px)"
+                  type="image/webp"
+                />
+                <source srcset="./img/testi/02.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/testi/02.jpg"
+                  class="image"
+                  width="390"
+                  height="660"
+                  alt=""
+                />
+              </picture>
+            </div>
+
+            <div class="testi__card-content">
+              <div class="testi__card-top">
+                <span>Алексей</span>
+                <span style="color: var(--grey4)">Новосибирск</span>
+              </div>
+              <h3 class="testi__card-title">Kia K5</h3>
+              <p>
+                Хотел сэкономить и&nbsp;не&nbsp;рисковать&nbsp;— ребята
+                полностью закрыли этот&nbsp;вопрос. Всё&nbsp;объяснили, держали
+                в&nbsp;курсе на&nbsp;каждом этапе. В&nbsp;итоге получил авто
+                дешевле рынка и&nbsp;без&nbsp;лишних нервов.
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="testi__card">
+            <div class="testi__card-img">
+              <picture>
+                <source
+                  srcset="./img/testi/03.webp"
+                  media="(max-width: 576px)"
+                  type="image/webp"
+                />
+                <source srcset="./img/testi/03.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="./img/testi/03.jpg"
+                  class="image"
+                  width="390"
+                  height="660"
+                  alt=""
+                />
+              </picture>
+            </div>
+
+            <div class="testi__card-content">
+              <div class="testi__card-top">
+                <span>Дмитрий</span>
+                <span style="color: var(--grey4)">Москва</span>
+              </div>
+              <h3 class="testi__card-title">Honda Stepwgn</h3>
+              <p>
+                Искал семейный автомобиль, сам&nbsp;бы&nbsp;точно
+                не&nbsp;справился. Подобрали хороший вариант из&nbsp;Японии,
+                проверили и&nbsp;быстро доставили. Очень доволен сервисом
+                и&nbsp;подходом.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="cta" id="cta">
+  <div class="container container_noright">
+    <div class="cta__container">
+      <div class="cta__content">
+        <div class="cta__text">
+          <h2 class="cta__title">Подберём авто под ваш бюджет</h2>
+          <p class="cta__desc text-xl">
+            Заполните форму&nbsp;&mdash; подберём авто под ваш бюджет
+            и&nbsp;отправим варианты уже в&nbsp;ближайшее время.
+          </p>
+        </div>
+        <form class="cta__form form">
+          <label class="form__field">
+            <input type="text" name="Имя" class="form__input" />
+            <span>Имя</span>
+          </label>
+          <label class="form__field">
+            <input type="tel" name="Телефон" class="form__input" />
+            <span>Телефон</span>
+          </label>
+          <label class="form__field">
+            <input type="text" name="Бюджет" class="form__input" />
+            <span>Бюджет</span>
+          </label>
+          <label class="form__field">
+            <textarea
+              type="text"
+              name="Пожелания"
+              class="form__input"
+            ></textarea>
+            <span>Пожелания</span>
+          </label>
+          <button class="form__btn btn">Получить подборку</button>
+        </form>
+      </div>
+
+      <div class="cta__img">
+        <picture>
+          <source
+            srcset="./img/cta-mob.webp"
+            media="(max-width: 576px)"
+            type="image/webp"
+          />
+          <source srcset="./img/cta.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="./img/cta.jpg"
+            class="image"
+            width="1200"
+            height="700"
+            alt=""
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="trust" id="trust">
+  <div class="container">
+    <h2 class="trust__title">Нам доверяют</h2>
+
+    <div class="trust__items">
+      <div class="trust__card">
+        <p class="trust__card-text text-xl">Работаем по договору</p>
+        <div class="trust__card-img">
+          <picture>
+            <source
+              srcset="./img/trust/01-mob.webp"
+              media="(max-width: 576px)"
+              type="image/webp"
+            />
+            <source srcset="./img/trust/01.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="./img/trust/01.png"
+              class="image"
+              width="510"
+              height="710"
+              alt=""
+            />
+          </picture>
+        </div>
+      </div>
+      <div class="trust__card">
+        <p class="trust__card-text text-xl">
+          Прозрачные отчёты на каждом этапе
+        </p>
+        <div class="trust__card-img">
+          <picture>
+            <source
+              srcset="./img/trust/02-mob.webp"
+              media="(max-width: 576px)"
+              type="image/webp"
+            />
+            <source srcset="./img/trust/02.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="./img/trust/02.png"
+              class="image"
+              width="510"
+              height="710"
+              alt=""
+            />
+          </picture>
+        </div>
+      </div>
+      <div class="trust__card">
+        <p class="trust__card-text text-xl">Фото и видео проверки авто</p>
+        <div class="trust__card-img">
+          <picture>
+            <source
+              srcset="./img/trust/03-mob.webp"
+              media="(max-width: 576px)"
+              type="image/webp"
+            />
+            <source srcset="./img/trust/03.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="./img/trust/03.png"
+              class="image"
+              width="510"
+              height="710"
+              alt=""
+            />
+          </picture>
+        </div>
+      </div>
+      <div class="trust__card">
+        <p class="trust__card-text text-xl">Реальные отзывы клиентов</p>
+        <div class="trust__card-img">
+          <picture>
+            <source
+              srcset="./img/trust/04-mob.webp"
+              media="(max-width: 576px)"
+              type="image/webp"
+            />
+            <source srcset="./img/trust/04.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="./img/trust/04.png"
+              class="image"
+              width="510"
+              height="710"
+              alt=""
+            />
+          </picture>
+        </div>
+      </div>
+      <div class="trust__card">
+        <p class="trust__card-text text-xl">Оплата поэтапно</p>
+        <div class="trust__card-img">
+          <picture>
+            <source
+              srcset="./img/trust/05-mob.webp"
+              media="(max-width: 576px)"
+              type="image/webp"
+            />
+            <source srcset="./img/trust/05.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="./img/trust/05.png"
+              class="image"
+              width="510"
+              height="710"
+              alt=""
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="contacts" id="contacts">
+  <div class="container">
+    <div class="contacts__header">
+      <div>
+        <h2 class="contacts__title">контактная информация</h2>
+        <p class="text-xl">
+          Работаем официально по договору.<br />
+          Все&nbsp;платежи прозрачны и подтверждаются документально.
+        </p>
+      </div>
+
+      <a href="#" target="_blank" class="btn contacts__btn">образец договора</a>
+    </div>
+
+    <div class="contacts__container">
+      <address class="contacts__address address">
+        <div class="address__item">
+          <p class="address__title">ООО «БП-Трейд»</p>
+        </div>
+
+        <div class="address__item">
+          <p class="address__title">ИНН</p>
+          <p class="address__value">XXXXXXXX</p>
+        </div>
+
+        <div class="address__item">
+          <p class="address__title">ОГРН:</p>
+          <p class="address__value">XXXXXXXX</p>
+        </div>
+
+        <div class="address__item">
+          <p class="address__title">Юридический адрес:</p>
+          <p class="address__value">Владивосток</p>
+          <p class="address__value">Спортивная улица, 2а</p>
+          <p class="address__value" style="color: var(--grey4)">690034</p>
+        </div>
+
+        <div class="address__row">
+          <a href="#" target="_blank" class="btn btn_square address__soc">
+            <svg class="" width="30" height="30">
+              <use xlink:href="img/sprite.svg#tg"></use>
+            </svg>
+          </a>
+          <a href="#" target="_blank" class="btn btn_square address__soc">
+            <svg class="" width="30" height="30">
+              <use xlink:href="img/sprite.svg#whatsapp"></use>
+            </svg>
+          </a>
+        </div>
+      </address>
+
+      <div class="contacts__map" id="map"></div>
+    </div>
+  </div>
+</section>
+
+      </main>
+      <footer class="footer">
+  <div class="container">
+    <div class="footer__container">
+      <div class="footer__links">
+        <a href="#" class="footer__link">Политика конфиденциальности</a>
+      </div>
+
+      <small class="footer__copy">©2026 БП-Трейд</small>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.map = null;
+  const coords = [131.938171, 43.108145];
+  main();
+  async function main() {
+    await ymaps3.ready;
+    const {
+      YMap,
+      YMapDefaultSchemeLayer,
+      YMapDefaultFeaturesLayer,
+      YMapMarker,
+    } = ymaps3;
+
+    const marker = (feature) => {
+      const markerContainer = document.createElement("div");
+      markerContainer.classList.add("marker-container");
+
+      return new YMapMarker(
+        {
+          coordinates: coords,
+        },
+        markerContainer,
+      );
+    };
+
+    map = new YMap(
+      document.getElementById("map"),
+      {
+        location: {
+          center: coords,
+          zoom: 16,
+        },
+        showScaleInCopyrights: true,
+      },
+      [new YMapDefaultSchemeLayer({}), new YMapDefaultFeaturesLayer({})],
+    );
+    map.addChild(marker());
+  }
+</script>
+
+    </div>
+  </body>
+</html>

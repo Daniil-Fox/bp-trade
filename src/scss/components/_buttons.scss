@@ -1,0 +1,158 @@
+// Buttons
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem 4rem;
+  font-weight: 500;
+  font-size: 2.2rem;
+  text-transform: lowercase;
+  color: var(--white);
+  border: none;
+  background-color: var(--bp-blue);
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+
+  &::after {
+    background-color: var(--bp-blue);
+  }
+  @include hover {
+    cursor: pointer;
+    background-color: var(--bp-blue-hover);
+    color: var(--white);
+
+    &::after {
+      background-color: var(--bp-blue-hover);
+    }
+  }
+
+  &:foucs,
+  &:focus-visible {
+    background-color: var(--bp-blue-hover);
+    outline: none;
+    color: var(--white);
+
+    &::after {
+      background-color: var(--bp-blue-hover);
+    }
+  }
+
+  &:active {
+    background-color: var(--bp-blue);
+    color: var(--white);
+
+    &::after {
+      background-color: var(--bp-blue);
+    }
+  }
+
+  &:disabled {
+    color: var(--grey3);
+    background-color: var(--grey2);
+
+    &::after {
+      background-color: var(--grey2);
+    }
+  }
+}
+
+.btn_sm {
+  padding: 0.65rem 2rem;
+}
+
+.btn_square {
+  padding: 0;
+  width: 6rem;
+  height: 6rem;
+  svg,
+  img {
+    display: block;
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+  }
+  svg {
+    fill: var(--white);
+  }
+}
+
+.btn_triangle {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1.6rem;
+    top: 0;
+    left: calc(100% - 0.1rem);
+    clip-path: polygon(0 0, 100% 0, 2% 100%, 0% 100%);
+    transition: background-color 0.3s ease;
+  }
+}
+
+.btn_alt {
+  background-color: var(--bp-blue-hover);
+  &::after {
+    background-color: var(--bp-blue-hover);
+  }
+  @include hover {
+    background-color: var(--bp-blue);
+    color: var(--white);
+    &::after {
+      background-color: var(--bp-blue);
+    }
+  }
+
+  &:foucs,
+  &:focus-visible {
+    background-color: var(--bp-blue);
+    outline: none;
+    color: var(--white);
+    &::after {
+      background-color: var(--bp-blue);
+    }
+  }
+
+  &:active {
+    background-color: var(--bp-blue-hover);
+    color: var(--white);
+    &::after {
+      background-color: var(--bp-blue-hover);
+    }
+  }
+}
+
+.btn_grey {
+  background-color: var(--grey1);
+  color: var(--bp-black);
+  &::after {
+    background-color: var(--grey1);
+  }
+  @include hover {
+    background-color: var(--bp-black);
+    color: var(--white);
+    &::after {
+      background-color: var(--bp-black);
+    }
+  }
+
+  &:foucs,
+  &:focus-visible {
+    background-color: var(--bp-black);
+    outline: none;
+    color: var(--white);
+
+    &::after {
+      background-color: var(--bp-black);
+    }
+  }
+
+  &:active {
+    background-color: var(--bp-blue-hover);
+    color: var(--white);
+    &::after {
+      background-color: var(--bp-blue-hover);
+    }
+  }
+}
