@@ -4,7 +4,6 @@ import "./_components.js";
   const trigger = document.getElementById("phoneTrigger");
   const menu = document.getElementById("phoneMenu");
   const arrow = document.getElementById("phoneArrow");
-  const callbackButton = document.getElementById("callbackButton");
 
   if (trigger) {
     let isOpen = false;
@@ -66,14 +65,6 @@ import "./_components.js";
       }
     });
 
-    // Обработка кнопки обратного звонка
-    callbackButton.addEventListener("click", function () {
-      // Здесь можно добавить логику открытия модального окна
-      // или перехода на страницу с формой
-      window.location.href = "tel:+78002006965";
-      closeMenu();
-    });
-
     // Обработка изменения размера окна
     window.addEventListener("resize", function () {
       checkMobile();
@@ -87,4 +78,65 @@ import "./_components.js";
     // Инициализация
     checkMobile();
   }
+})();
+
+(function () {
+  const header = document.querySelector(".header");
+  if (!header) return;
+  let lastScroll = window.scrollY;
+  let ticking = false;
+  let headerHeight = 0;
+  let isFixed = false;
+  let hideTimeout = null;
+
+  function getHeaderFullHeight() {
+    const style = window.getComputedStyle(header);
+    const marginTop = parseFloat(style.marginTop) || 0;
+    const marginBottom = parseFloat(style.marginBottom) || 0;
+    return header.offsetHeight + marginTop + marginBottom;
+  }
+
+  function onScroll() {
+    const currentScroll = window.scrollY;
+    if (currentScroll < 30) {
+      // Почти в самом верху — возвращаем header в исходное состояние
+      header.classList.remove("header--fixed", "header--hidden");
+
+      isFixed = false;
+      if (hideTimeout) {
+        clearTimeout(hideTimeout);
+        hideTimeout = null;
+      }
+    } else if (currentScroll > lastScroll && currentScroll > 50) {
+      // Скролл вниз — скрываем
+      header.classList.add("header--hidden");
+      if (hideTimeout) clearTimeout(hideTimeout);
+      hideTimeout = setTimeout(() => {
+        header.classList.remove("header--fixed");
+
+        isFixed = false;
+      }, 300); // 300ms = transition
+    } else if (currentScroll < lastScroll) {
+      // Скролл вверх — показываем
+      if (hideTimeout) {
+        clearTimeout(hideTimeout);
+        hideTimeout = null;
+      }
+      header.classList.remove("header--hidden");
+      if (!isFixed) {
+        header.classList.add("header--fixed");
+
+        isFixed = true;
+      }
+    }
+    lastScroll = currentScroll;
+    ticking = false;
+  }
+
+  window.addEventListener("scroll", function () {
+    if (!ticking) {
+      window.requestAnimationFrame(onScroll);
+      ticking = true;
+    }
+  });
 })();

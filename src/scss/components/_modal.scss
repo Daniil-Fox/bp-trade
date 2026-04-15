@@ -12,12 +12,11 @@
   pointer-events: none;
   overflow-y: hidden;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: opacity 0.2s ease;
-
   @include mobile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 3rem;
   }
 

@@ -32,7 +32,7 @@ new Swiper(".work__slider", {
       spaceBetween: 20,
     },
     577: {
-      slidesPerView: 4,
+      slidesPerView: 3.2,
       spaceBetween: 40,
     },
   },
@@ -46,7 +46,7 @@ new Swiper(".testi__slider", {
       spaceBetween: 20,
     },
     577: {
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 40,
     },
   },

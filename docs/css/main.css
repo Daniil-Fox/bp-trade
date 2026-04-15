@@ -250,6 +250,16 @@ section:last-child {
   transform: translate(-50%, -50%);
 }
 
+.just-validate-error-label {
+  display: none;
+}
+
+input.just-validate-error-field,
+textarea.just-validate-error-field {
+  outline: 2px solid var(--red-alarm);
+  outline-offset: -2px;
+}
+
 p,
 ul,
 ol {
@@ -616,8 +626,9 @@ h3 {
   margin-bottom: 2rem;
 }
 .phone-dropdown__location {
-  font-weight: 300;
-  font-size: 2rem;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 150%;
   text-align: right;
   color: #000;
 }
@@ -675,6 +686,10 @@ h3 {
   z-index: 999;
   padding: 4rem 0;
   background-color: var(--white);
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
 }
 .header__container {
   display: -webkit-box;
@@ -799,6 +814,21 @@ h3 {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
+.header--fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header--hidden {
+  -webkit-transform: translateY(-200%);
+  -ms-transform: translateY(-200%);
+  transform: translateY(-200%);
+}
+
 .form__field {
   display: block;
   position: relative;
@@ -818,7 +848,7 @@ h3 {
   color: var(--bp-black);
   padding: 1.2rem 2rem 0.4rem;
 }
-.form__input:focus, .form__input:focus-visible {
+.form__input:focus:not(.just-validate-error-field), .form__input:focus-visible:not(.just-validate-error-field) {
   outline: none;
 }
 .form textarea.form__input {
@@ -844,7 +874,7 @@ h3 {
   -ms-transform: translateY(-1rem);
   transform: translateY(-1rem);
 }
-.form__field.filled .form__input:focus ~ span, .form__field.filled .form__input:focus-visible ~ span {
+.form__field.filled .form__input ~ span, .form__field.filled .form__input ~ span {
   font-size: 1.4rem;
   -webkit-transform: translateY(-1rem);
   -ms-transform: translateY(-1rem);
@@ -1696,20 +1726,20 @@ h3 {
   opacity: 0;
   pointer-events: none;
   overflow-y: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
 @media (max-width: 576px) {
   .modal {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     padding: 3rem;
   }
 }

@@ -154,3 +154,13 @@ section {
   height: 10rem;
   transform: translate(-50%, -50%);
 }
+
+.just-validate-error-label {
+  display: none;
+}
+
+input.just-validate-error-field,
+textarea.just-validate-error-field {
+  outline: 2px solid var(--red-alarm);
+  outline-offset: -2px;
+}

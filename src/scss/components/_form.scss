@@ -19,8 +19,8 @@
     color: var(--bp-black);
     padding: 1.2rem 2rem 0.4rem;
 
-    &:focus,
-    &:focus-visible {
+    &:focus:not(.just-validate-error-field),
+    &:focus-visible:not(.just-validate-error-field) {
       outline: none;
     }
   }
@@ -49,8 +49,8 @@
     transform: translateY(-1rem);
   }
 
-  &__field.filled &__input:focus ~ span,
-  &__field.filled &__input:focus-visible ~ span {
+  &__field.filled &__input ~ span,
+  &__field.filled &__input ~ span {
     font-size: 1.4rem;
     transform: translateY(-1rem);
   }
