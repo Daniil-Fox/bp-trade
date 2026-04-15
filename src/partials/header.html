@@ -24,7 +24,19 @@
 
         <button class="btn btn_sm header__btn">консультация</button>
       </div>
+
+      <div class="header__burger">
+        <button
+          class="btn-reset burger"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          data-burger
+        >
+          <span class="burger__line"></span>
+        </button>
+      </div>
     </div>
+    @include('./header-menu.html')
   </div>
 </header>
 @include('./modal-order.html') @include('./modal-consult.html')

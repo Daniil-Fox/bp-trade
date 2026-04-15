@@ -4,7 +4,7 @@
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 999;
   padding: 4rem 0;
   background-color: var(--white);
   &__container {
@@ -12,6 +12,8 @@
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    position: relative;
+    z-index: 90;
   }
 
   &__right {
@@ -33,4 +35,14 @@
   &__btn {
     min-width: 30rem;
   }
+  &__burger {
+    display: none;
+
+    @include mobile {
+      display: flex;
+    }
+  }
+}
+.burger {
+  @include burger;
 }

@@ -6,7 +6,10 @@
     display: flex;
     align-items: center;
     gap: 5.6rem;
-
+    @include mobile {
+      flex-direction: column;
+      gap: 5rem;
+    }
     li {
       a {
         font-weight: 500;
