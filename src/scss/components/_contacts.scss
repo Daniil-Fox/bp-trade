@@ -6,16 +6,49 @@
     gap: 2rem;
 
     margin-bottom: 6rem;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    @include mobile {
+      margin-bottom: 7rem;
+    }
+  }
+  &__text {
+    @include mobile {
+      font-size: 2.2rem;
+      font-weight: 400;
+      line-height: 150%;
+    }
   }
 
   &__btn {
     max-width: 37rem;
     width: 100%;
+
+    @include mobile {
+      max-width: 100%;
+      display: none;
+    }
+
+    &_mob {
+      display: none;
+      @include mobile {
+        display: flex;
+      }
+    }
   }
 
   &__container {
     display: flex;
     gap: 4rem;
+    @include mobile {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   &__address {
@@ -27,5 +60,10 @@
   &__map {
     flex-grow: 1;
     background-color: #f7f7f7;
+
+    @include mobile {
+      flex: unset;
+      aspect-ratio: 1 / 1;
+    }
   }
 }

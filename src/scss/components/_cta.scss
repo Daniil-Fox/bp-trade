@@ -2,11 +2,18 @@
   &__container {
     display: flex;
     gap: 10rem;
+    @include mobile {
+      flex-direction: column-reverse;
+      gap: 5rem;
+    }
   }
   &__content {
     width: 100%;
     max-width: 74rem;
     flex-shrink: 0;
+    @include mobile {
+      max-width: 100%;
+    }
   }
 
   &__title {
@@ -15,6 +22,11 @@
 
   &__text {
     margin-bottom: 5rem;
+    @include mobile {
+      font-size: 2.2rem;
+      font-weight: 400;
+      line-height: 150%;
+    }
   }
   &__img {
     position: relative;
@@ -25,6 +37,13 @@
     mask-size: cover;
     mask-position: left;
     flex-shrink: 0;
+
+    @include mobile {
+      min-height: 38.2rem;
+      margin-left: calc(-1 * var(--container-offset));
+      margin-right: calc(-1 * var(--container-offset));
+      mask-image: url("./../img/svg/about-mask.svg");
+    }
     img {
       position: absolute;
       right: 0;
@@ -38,5 +57,10 @@
   &__form {
     margin-top: auto;
     max-width: 53.5rem;
+
+    @include mobile {
+      max-width: 100%;
+      margin-top: 0;
+    }
   }
 }

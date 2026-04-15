@@ -19,4 +19,8 @@
   --grey3: #b3b3b3;
   --grey4: #8c8c8c;
   --red-alarm: #f00;
+
+  @media (max-width: 576px) {
+    --container-offset: 3rem;
+  }
 }

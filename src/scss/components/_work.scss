@@ -23,6 +23,11 @@
     height: 47rem;
     flex-shrink: 0;
     flex-grow: 0;
+
+    @include mobile {
+      height: auto;
+      aspect-ratio: 1 / 1;
+    }
     img {
       display: block;
       width: 100%;

@@ -1,10 +1,17 @@
 .about {
   &__title {
     margin-bottom: 2rem;
+    @include mobile {
+      margin-bottom: 5rem;
+    }
   }
   &__container {
     display: flex;
     gap: 10rem;
+    @include mobile {
+      flex-direction: column;
+      gap: 7rem;
+    }
   }
   &__content {
     width: 100%;
@@ -14,6 +21,10 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 2rem;
+    @include mobile {
+      gap: 0;
+      max-width: 100%;
+    }
   }
   &__img {
     position: relative;
@@ -23,6 +34,13 @@
     mask-image: url("./../img/svg/img-mask.svg");
     mask-size: cover;
     mask-position: left;
+
+    @include mobile {
+      min-height: 38.2rem;
+      margin-left: calc(-1 * var(--container-offset));
+      margin-right: calc(-1 * var(--container-offset));
+      mask-image: url("./../img/svg/about-mask.svg");
+    }
 
     img {
       position: absolute;
@@ -35,6 +53,18 @@
   }
 
   &__btn {
-    width: 52rem;
+    width: 100%;
+    max-width: 52rem;
+    @include mobile {
+      display: none;
+    }
+
+    &_mob {
+      display: none;
+      @include mobile {
+        display: flex;
+        max-width: 100%;
+      }
+    }
   }
 }

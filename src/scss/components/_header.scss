@@ -18,6 +18,16 @@
     display: flex;
     align-items: center;
     gap: 11rem;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__nav {
+    @include mobile {
+      display: none;
+    }
   }
 
   &__btn {

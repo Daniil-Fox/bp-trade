@@ -24,7 +24,8 @@ ol {
     margin-bottom: 0.25em;
   }
 }
-h1 {
+h1,
+.h1 {
   margin: 0;
   font-family: var(--second-family);
   font-weight: 600;
@@ -32,9 +33,15 @@ h1 {
   line-height: 110%;
   text-transform: uppercase;
   color: var(--bp-black);
+
+  @include mobile {
+    font-size: 6rem;
+    line-height: 100%;
+  }
 }
 
-h2 {
+h2,
+.h2 {
   margin: 0;
   font-family: var(--second-family);
   font-weight: 600;
@@ -42,8 +49,14 @@ h2 {
   line-height: 110%;
   text-transform: uppercase;
   color: var(--bp-black);
+
+  @include mobile {
+    font-size: 4rem;
+    line-height: 100%;
+  }
 }
 
+h3,
 h3 {
   margin: 0;
   font-family: var(--second-family);
@@ -62,4 +75,9 @@ h3 {
   line-height: 130%;
   text-transform: unset;
   color: var(--bp-black);
+
+  @include mobile {
+    font-size: 2.4rem;
+    line-height: 150%;
+  }
 }

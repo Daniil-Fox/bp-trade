@@ -1,0 +1,62 @@
+<div class="modal" id="modal-order">
+  <div class="modal__body">
+    <button class="btn-reset modal__close">
+      <svg class="" width="28" height="28">
+        <use xlink:href="img/sprite.svg#cross"></use>
+      </svg>
+    </button>
+    <div class="modal__container">
+      <div class="modal__content">
+        <div class="modal__text">
+          <p class="modal__title h2">заказать авто</p>
+          <p class="modal__desc">
+            Подберём, проверим и&nbsp;привезём автомобиль под ваш&nbsp;бюджет.
+            Оставьте заявку — свяжемся с&nbsp;вами и&nbsp;обсудим варианты.
+          </p>
+        </div>
+        <form class="modal__form order-form form">
+          <label class="form__field">
+            <input type="text" name="Имя" class="form__input" />
+            <span>Имя</span>
+          </label>
+          <label class="form__field">
+            <input type="tel" name="Телефон" class="form__input" />
+            <span>Телефон</span>
+          </label>
+          <label class="form__field">
+            <input type="text" name="Бюджет" class="form__input" />
+            <span>Бюджет</span>
+          </label>
+          <label class="form__field">
+            <input
+              type="text"
+              name="Какой автомобиль интересует"
+              class="form__input"
+            />
+            <span>Какой автомобиль интересует</span>
+          </label>
+          <button class="form__btn btn">Получить подборку</button>
+        </form>
+      </div>
+
+      <div class="modal__img">
+        <picture>
+          <source
+            srcset="./img/modal/order-mob.webp"
+            media="(max-width: 576px)"
+            type="image/webp"
+          />
+          <source srcset="./img/modal/order.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="./img/modal/order.jpg"
+            class="image"
+            width=""
+            height=""
+            alt=""
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</div>

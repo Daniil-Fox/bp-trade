@@ -122,6 +122,124 @@
     </div>
   </div>
 </header>
+<div class="modal" id="modal-order">
+  <div class="modal__body">
+    <button class="btn-reset modal__close">
+      <svg class="" width="28" height="28">
+        <use xlink:href="img/sprite.svg#cross"></use>
+      </svg>
+    </button>
+    <div class="modal__container">
+      <div class="modal__content">
+        <div class="modal__text">
+          <p class="modal__title h2">заказать авто</p>
+          <p class="modal__desc">
+            Подберём, проверим и&nbsp;привезём автомобиль под ваш&nbsp;бюджет.
+            Оставьте заявку — свяжемся с&nbsp;вами и&nbsp;обсудим варианты.
+          </p>
+        </div>
+        <form class="modal__form order-form form">
+          <label class="form__field">
+            <input type="text" name="Имя" class="form__input" />
+            <span>Имя</span>
+          </label>
+          <label class="form__field">
+            <input type="tel" name="Телефон" class="form__input" />
+            <span>Телефон</span>
+          </label>
+          <label class="form__field">
+            <input type="text" name="Бюджет" class="form__input" />
+            <span>Бюджет</span>
+          </label>
+          <label class="form__field">
+            <input
+              type="text"
+              name="Какой автомобиль интересует"
+              class="form__input"
+            />
+            <span>Какой автомобиль интересует</span>
+          </label>
+          <button class="form__btn btn">Получить подборку</button>
+        </form>
+      </div>
+
+      <div class="modal__img">
+        <picture>
+          <source
+            srcset="./img/modal/order-mob.webp"
+            media="(max-width: 576px)"
+            type="image/webp"
+          />
+          <source srcset="./img/modal/order.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="./img/modal/order.jpg"
+            class="image"
+            width=""
+            height=""
+            alt=""
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</div>
+ <div class="modal" id="modal-consult ">
+  <div class="modal__body">
+    <button class="btn-reset modal__close">
+      <svg class="" width="28" height="28">
+        <use xlink:href="img/sprite.svg#cross"></use>
+      </svg>
+    </button>
+    <div class="modal__container">
+      <div class="modal__content">
+        <div class="modal__text">
+          <p class="modal__title h2">Получить консультацию</p>
+          <p class="modal__desc">Оперативно ответим на ваши вопросы</p>
+        </div>
+        <form class="modal__form consult-form form">
+          <label class="form__field">
+            <input type="text" name="Имя" class="form__input" />
+            <span>Имя</span>
+          </label>
+          <label class="form__field">
+            <input type="tel" name="Телефон" class="form__input" />
+            <span>Телефон</span>
+          </label>
+          <label class="form__field">
+            <textarea
+              type="text"
+              name="Вопрос / комментарий"
+              class="form__input"
+            ></textarea>
+            <span>Вопрос / комментарий</span>
+          </label>
+          <button class="form__btn btn">Получить подборку</button>
+        </form>
+      </div>
+
+      <div class="modal__img">
+        <picture>
+          <source
+            srcset="./img/modal/consult-mob.webp"
+            media="(max-width: 576px)"
+            type="image/webp"
+          />
+          <source srcset="./img/modal/consult.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="./img/modal/consult.jpg"
+            class="image"
+            width=""
+            height=""
+            alt=""
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       <main class="main">
         <section class="hero">
@@ -571,6 +689,9 @@
           />
         </picture>
       </div>
+      <a href="#" target="_blank" class="btn abuot__btn abuot__btn_mob">
+        перейти в телеграм канал
+      </a>
     </div>
   </div>
 </section>
@@ -696,6 +817,7 @@
         </div>
       </div>
     </div>
+    <button class="btn testi__btn testi__btn_mob">получить консультацию</button>
   </div>
 </section>
 
@@ -762,7 +884,7 @@
 
     <div class="trust__items">
       <div class="trust__card">
-        <p class="trust__card-text text-xl">Работаем по договору</p>
+        <p class="trust__card-text text-xl">Работаем по&nbsp;договору</p>
         <div class="trust__card-img">
           <picture>
             <source
@@ -784,7 +906,7 @@
       </div>
       <div class="trust__card">
         <p class="trust__card-text text-xl">
-          Прозрачные отчёты на каждом этапе
+          Прозрачные отчёты на&nbsp;каждом этапе
         </p>
         <div class="trust__card-img">
           <picture>
@@ -806,7 +928,7 @@
         </div>
       </div>
       <div class="trust__card">
-        <p class="trust__card-text text-xl">Фото и видео проверки авто</p>
+        <p class="trust__card-text text-xl">Фото и&nbsp;видео проверки авто</p>
         <div class="trust__card-img">
           <picture>
             <source
@@ -877,7 +999,7 @@
     <div class="contacts__header">
       <div>
         <h2 class="contacts__title">контактная информация</h2>
-        <p class="text-xl">
+        <p class="contacts__text text-xl">
           Работаем официально по договору.<br />
           Все&nbsp;платежи прозрачны и подтверждаются документально.
         </p>
@@ -924,6 +1046,10 @@
       </address>
 
       <div class="contacts__map" id="map"></div>
+
+      <a href="#" target="_blank" class="btn contacts__btn contacts__btn_mob"
+        >образец договора</a
+      >
     </div>
   </div>
 </section>

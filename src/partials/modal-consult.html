@@ -1,0 +1,55 @@
+<div class="modal" id="modal-consult ">
+  <div class="modal__body">
+    <button class="btn-reset modal__close">
+      <svg class="" width="28" height="28">
+        <use xlink:href="img/sprite.svg#cross"></use>
+      </svg>
+    </button>
+    <div class="modal__container">
+      <div class="modal__content">
+        <div class="modal__text">
+          <p class="modal__title h2">Получить консультацию</p>
+          <p class="modal__desc">Оперативно ответим на ваши вопросы</p>
+        </div>
+        <form class="modal__form consult-form form">
+          <label class="form__field">
+            <input type="text" name="Имя" class="form__input" />
+            <span>Имя</span>
+          </label>
+          <label class="form__field">
+            <input type="tel" name="Телефон" class="form__input" />
+            <span>Телефон</span>
+          </label>
+          <label class="form__field">
+            <textarea
+              type="text"
+              name="Вопрос / комментарий"
+              class="form__input"
+            ></textarea>
+            <span>Вопрос / комментарий</span>
+          </label>
+          <button class="form__btn btn">Получить подборку</button>
+        </form>
+      </div>
+
+      <div class="modal__img">
+        <picture>
+          <source
+            srcset="./img/modal/consult-mob.webp"
+            media="(max-width: 576px)"
+            type="image/webp"
+          />
+          <source srcset="./img/modal/consult.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="./img/modal/consult.jpg"
+            class="image"
+            width=""
+            height=""
+            alt=""
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</div>

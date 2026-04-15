@@ -32,6 +32,16 @@ new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".services__slider", {
   navigation: {
     prevEl: ".services-prev",
     nextEl: ".services-next"
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.1,
+      spaceBetween: 20
+    },
+    577: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
   }
 });
 new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".work__slider", {
@@ -40,11 +50,31 @@ new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".work__slider", {
   navigation: {
     prevEl: ".work-prev",
     nextEl: ".work-next"
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.1,
+      spaceBetween: 20
+    },
+    577: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
   }
 });
 new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".testi__slider", {
   slidesPerView: 3,
-  spaceBetween: 40
+  spaceBetween: 40,
+  breakpoints: {
+    320: {
+      slidesPerView: 1.1,
+      spaceBetween: 20
+    },
+    577: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+  }
 });
 
 /***/ },
